@@ -6,6 +6,7 @@ logic clk;
 logic reset;
 logic [63:0] gridOut;
 logic [63:0] seed;
+logic sel;
 
 Game gamimus (clk, reset, seed, gridOut);
 
@@ -19,7 +20,7 @@ begin
 
 #0 reset = 1'b1;
 #0 sel = 1'b0; 
-#0 seed = 64'h0 00_06_76_00_04_64_64_00;
+#0 seed = 64'h0006760004646400;
 
 #22 reset = 1'b0;
 #71 sel =1'b1;

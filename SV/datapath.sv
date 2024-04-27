@@ -9,7 +9,6 @@ module datapath ( grid, grid_evolve );
    output logic [63:0] 	grid_evolve;
    input logic [63:0] 	grid;
    
-   /tmp/FHDMioXeVT.o
 evolve3 e0_0 (grid_evolve[0], grid[1], grid[16], grid[17], grid[0]);
 evolve5 e0_1 (grid_evolve[1], grid[0], grid[2], grid[16], grid[17], grid[18], grid[1]);
 evolve5 e0_2 (grid_evolve[2], grid[1], grid[3], grid[17], grid[18], grid[19], grid[2]);
@@ -266,10 +265,6 @@ evolve5 e15_12 (grid_evolve[252], grid[235], grid[236], grid[237], grid[251], gr
 evolve5 e15_13 (grid_evolve[253], grid[236], grid[237], grid[238], grid[252], grid[254], grid[253]);
 evolve5 e15_14 (grid_evolve[254], grid[237], grid[238], grid[239], grid[253], grid[255], grid[254]);
 evolve3 e15_15 (grid_evolve[255], grid[238], grid[239], grid[254], grid[255]);
-
-
-=== Code Execution Successful ===  
-
  
 endmodule // top
 

@@ -9,7 +9,7 @@ if [file exists work] {
 vlib work
 
 # compile source files
-vlog Game.sv Game_tb.sv
+vlog Game.sv mux.sv flop.sv datapath.sv Game_tb.sv
 
 # start and run simulation
 vsim -voptargs=+acc work.tb
@@ -23,7 +23,7 @@ view wave
 add wave -noupdate -divider -height 32 "Clock Divider"
 add wave -hex /tb/dut/clk
 add wave -hex /tb/dut/rst
-add wave -hex /tb/dut/clk_en
+add wave -hex /tb/dut/
 
 add list -hex -r /tb/*
 add log -r /*

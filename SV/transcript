@@ -11,20 +11,61 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# do Game.do
+# do game.do
 # Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 22:41:29 on Apr 26,2024
-# vlog -reportprogress 300 Game.sv Game_tb.sv 
+# Start time: 23:27:39 on Apr 26,2024
+# vlog -reportprogress 300 Game.sv mux.sv flop.sv datapath.sv Game_tb.sv 
 # -- Compiling module Game
-# ** Error: (vlog-13069) Game.sv(3): near "input": syntax error, unexpected input, expecting ';'.
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module mux4
+# -- Compiling module mux5
+# -- Compiling module mux6
+# -- Compiling module mux16
+# -- Compiling module flop
+# -- Compiling module datapath
+# -- Compiling module evolve3
+# -- Compiling module evolve5
+# -- Compiling module evolve8
+# -- Compiling module rules
 # -- Compiling module tb
-# ** Error: Game_tb.sv(21): (vlog-2730) Undefined variable: 'sel'.
-# ** Error: Game_tb.sv(22): (vlog-13008) Unsized literal value 0006760004646400 exceeds default size of literals which  is 32-bit. Either size the literal (i.e. 64'd0006760004646400) or reduce the literal value to fit in 32 bits.
-# ** Error: (vlog-13069) Game_tb.sv(22): near "0006760004646400": syntax error, unexpected INTEGER NUMBER, expecting ';'.
-# End time: 22:41:30 on Apr 26,2024, Elapsed time: 0:00:01
-# Errors: 4, Warnings: 0
-# ** Error: C:/modeltech64_2021.3/win64/vlog failed.
-# Error in macro ./Game.do line 12
-# C:/modeltech64_2021.3/win64/vlog failed.
+# 
+# Top level modules:
+# 	mux3
+# 	mux4
+# 	mux5
+# 	mux6
+# 	mux16
+# 	tb
+# End time: 23:27:39 on Apr 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.tb 
+# Start time: 23:27:39 on Apr 26,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.Game(fast)
+# Loading work.datapath(fast)
+# Loading work.evolve3(fast)
+# Loading work.rules(fast)
+# Loading work.evolve5(fast)
+# Loading work.evolve8(fast)
+# Loading work.mux2(fast)
+# Loading work.flop(fast)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'gamimus'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gamimus File: Game_tb.sv Line: 11
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (64) for port 'selector'. The port definition is at: Game.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gamimus File: Game_tb.sv Line: 11
+# ** Warning: (vsim-3722) Game_tb.sv(11): [TFMPC] - Missing connection for port 'gridOut'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'floppimus'.  Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gamimus/floppimus File: Game.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (64) for port 'clk'. The port definition is at: flop.sv(28).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gamimus/floppimus File: Game.sv Line: 16
+# ** Warning: (vsim-3722) Game.sv(16): [TFMPC] - Missing connection for port 'q'.
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** UI-Msg: (vish-4014) No objects found matching '/tb/dut/clk'.
+# Error in macro ./game.do line 24
+# ** UI-Msg: (vish-4014) No objects found matching '/tb/dut/clk'.
 #     while executing
-# "vlog Game.sv Game_tb.sv"
+# "add wave -noupdate -divider -height 32 "Clock Divider""
