@@ -8,7 +8,7 @@ logic [63:0] gridOut;
 logic [63:0] seed;
 logic sel;
 
-Game gamimus (clk, reset, seed, gridOut);
+Game dut (clk, reset, selector, seed, gridOut);
 
 initial begin
     clk =1'b1;

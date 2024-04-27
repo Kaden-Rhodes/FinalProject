@@ -20,10 +20,13 @@ view wave
 -- display input and output signals as hexidecimal values
 # Diplays All Signals recursively
 # add wave -hex -r /tb/*
-add wave -noupdate -divider -height 32 "Clock Divider"
+
+add wave -hex /tb/dut/reset
+add wave -hex /tb/dut/selector
+add wave -hex /tb/dut/dataOut
 add wave -hex /tb/dut/clk
-add wave -hex /tb/dut/rst
-add wave -hex /tb/dut/
+
+
 
 add list -hex -r /tb/*
 add log -r /*

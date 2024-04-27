@@ -13,7 +13,7 @@ datapath evolve (dataIn, dataOut);
 
 mux2 #(64) muxximus (gridOut, seed, selector, dataIn);
 
-flop #(64) floppimus (dataOut, gridOut);
+flop #(64) floppimus (clk, dataOut, gridOut);
 
 endmodule
 
