@@ -1,22 +1,23 @@
-module Game(clk, floprReset, muxSelector, seed, flopGridOut);
+`timescale 1ns / 1ps
+module Game(clk,seed,muxSelector,floprReset,floprGridOut);
 
 input logic clk;
-input logic reset;
-input logic muxSelector
-input logic floprReset;
-input logic [255:0] seed;
-output logic [255:0] flopGridOut;
 
-logic [255:0] MuxDp;
+input logic [255:0] seed;
+
+input logic muxSelector;
+input logic floprReset;
+
+output logic [255:0] floprGridOut;
+
+logic [255:0] muxDp;
 logic [255:0] dpFlopr;
 
-//flop #(256) floppimus (clk, dataOut, gridOut);
-
-mux2 #(256) muxximus (seed, flopGridOut, muxSel, muxDp);
+muxximus muxximus (seed, floprGridOut, muxSelector, muxDp);
 
 datapath evolve (muxDp, dpFlopr);
 
-flopr #(256) floppimus (clk, floprReset, dpFlopr, flopGridOut);
+floppimus floppimus (clk, floprReset, dpFlopr, floprGridOut);
 
 endmodule
 

@@ -4,11 +4,13 @@
  
  */
 
-module datapath ( grid, grid_evolve );
+module datapath (grid,grid_evolve);
 
-   output logic [255:0] 	grid_evolve;
-   input logic [255:0] 	grid;
+  
+   input logic [255:0]  grid;
+   output logic [255:0] grid_evolve;
    
+    
 evolve3 e0_0 (grid_evolve[0], grid[1], grid[16], grid[17], grid[0]);
 evolve5 e0_1 (grid_evolve[1], grid[0], grid[2], grid[16], grid[17], grid[18], grid[1]);
 evolve5 e0_2 (grid_evolve[2], grid[1], grid[3], grid[17], grid[18], grid[19], grid[2]);

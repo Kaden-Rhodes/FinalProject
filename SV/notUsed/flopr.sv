@@ -35,3 +35,7 @@ module flopr #(parameter WIDTH = 8) (
     else       q <= #1 d;
 endmodule
 
+
+
+
+
