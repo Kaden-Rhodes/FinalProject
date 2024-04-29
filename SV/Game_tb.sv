@@ -1,29 +1,30 @@
-`timescale  1ns/1ps
+`timescale  1ns / 1ps
 
-module tb();
+module tb ();
 
 logic clk;
 logic reset;
-logic [63:0] gridOut;
-logic [63:0] seed;
-logic sel;
+logic [255:0] flopGridOut;
+logic [255:0] seed;
+logic muxSelector;
 
-Game dut (clk, reset, selector, seed, gridOut);
+Game dut (clk, reset, sel, seed, gridOut);
 
-initial begin
+initial 
+    begin
     clk =1'b1;
     forever #10 clk = ~clk;
-end
+    end
 
 initial
-begin
+    begin
 
-#0 reset = 1'b1;
-#0 sel = 1'b0; 
-#0 seed = 64'h0006760004646400;
+    #0 reset = 1'b1;
+    #0 sel = 1'b0; 
+    #0 seed = 256'h0006760004646400000000000000000000000000000000000000000000000000; 
 
-#22 reset = 1'b0;
-#71 sel =1'b1;
+    #22 reset = 1'b0;
+    #71 sel =1'b1;
 
-end
+    end
 endmodule

@@ -9,7 +9,7 @@ if [file exists work] {
 vlib work
 
 # compile source files
-vlog Game.sv mux.sv flop.sv datapath.sv Game_tb.sv
+vlog Game.sv mux.sv flopr.sv datapath.sv Game_tb.sv
 
 # start and run simulation
 vsim -voptargs=+acc work.tb
@@ -23,6 +23,7 @@ view wave
 
 add wave -hex /tb/dut/reset
 add wave -hex /tb/dut/selector
+add wave -hex /tb/dut/dataOut
 add wave -hex /tb/dut/dataOut
 add wave -hex /tb/dut/clk
 
@@ -44,6 +45,6 @@ configure wave -rowmargin 4
 configure wave -childrowmargin 2
 
 -- Run the Simulation
-run 1200 ms
+run 260 ns
 
 

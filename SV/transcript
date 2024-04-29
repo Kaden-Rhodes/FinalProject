@@ -17,52 +17,35 @@
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt4".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt5".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt6".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt7".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt8".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 00:10:18 on Apr 27,2024
-# vlog -reportprogress 300 Game.sv mux.sv flop.sv datapath.sv Game_tb.sv 
+# Start time: 11:23:50 on Apr 29,2024
+# vlog -reportprogress 300 Game.sv mux.sv flopr.sv datapath.sv Game_tb.sv 
 # -- Compiling module Game
+# ** Error: Game.sv(1): (vlog-2730) Undefined variable: 'gridOut'.
+# ** Error: Game.sv(1): (vlog-13294) Identifier must be declared with a port mode: gridOut.
 # -- Compiling module mux2
 # -- Compiling module mux3
 # -- Compiling module mux4
 # -- Compiling module mux5
 # -- Compiling module mux6
 # -- Compiling module mux16
-# -- Compiling module flop
+# -- Compiling module flopr
 # -- Compiling module datapath
 # -- Compiling module evolve3
 # -- Compiling module evolve5
 # -- Compiling module evolve8
 # -- Compiling module rules
 # -- Compiling module tb
-# 
-# Top level modules:
-# 	mux3
-# 	mux4
-# 	mux5
-# 	mux6
-# 	mux16
-# 	tb
-# End time: 00:10:18 on Apr 27,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" work.tb 
-# Start time: 00:10:18 on Apr 27,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading sv_std.std
-# Loading work.tb(fast)
-# Loading work.Game(fast)
-# Loading work.datapath(fast)
-# Loading work.evolve3(fast)
-# Loading work.rules(fast)
-# Loading work.evolve5(fast)
-# Loading work.evolve8(fast)
-# Loading work.mux2(fast)
-# Loading work.flop(fast)
-# .main_pane.list.interior.cs.body
-# .main_pane.wave.interior.cs.body.pw.wf
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: kaden  Hostname: KADEN-FWLAPTOP  ProcessID: 18528
-#           Attempting to use alternate WLF file "./wlft90rqat".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft90rqat
+# End time: 11:23:50 on Apr 29,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/modeltech64_2021.3/win64/vlog failed.
+# Error in macro ./game.do line 12
+# C:/modeltech64_2021.3/win64/vlog failed.
+#     while executing
+# "vlog Game.sv mux.sv flopr.sv datapath.sv Game_tb.sv"

@@ -9,6 +9,13 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2021.3 2021.07, Jul 13 2021
 13
 !s112 1.1
@@ -82,15 +89,49 @@ R4
 R5
 n@_opt5
 R6
+R1
+T_opt6
+!s110 1714403906
+VzmXZbDRzVMnBAHHQgg1Q51
+04 8 4 work stimulus fast 0
+=1-8cb87ec89cc2-662fba42-1df-4424
+R3
+R4
+R5
+n@_opt6
+R6
+R1
+T_opt7
+!s110 1714404042
+V7RbRbLB5meUV@P]DcEkS71
+R2
+=1-8cb87ec89cc2-662fbac9-35e-a14
+R3
+R4
+R5
+n@_opt7
+R6
+R1
+T_opt8
+!s110 1714404430
+VC4bD]SHM`e?cf:n0BDMcZ2
+R2
+=1-8cb87ec89cc2-662fbc4e-1d0-35cc
+R3
+R4
+R5
+n@_opt8
+R6
+R1
 vdatapath
 Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z8 !s110 1714194618
+Z8 !s110 1714407830
 !i10b 1
-!s100 OfQ3odbg<lSaii9]H<J310
-In449X]XPljTZ0TAiAVJFY2
+!s100 ;cfcV5`_HKD2cadA@P[_Q0
+I?g7m33Lk4:IAfNoLE6m4X3
 S1
 R1
-Z9 w1714192045
+Z9 w1714404602
 Z10 8datapath.sv
 Z11 Fdatapath.sv
 !i122 0
@@ -100,11 +141,11 @@ Z13 OL;L;2021.3;73
 r1
 !s85 0
 31
-Z14 !s108 1714194618.000000
-Z15 !s107 Game_tb.sv|datapath.sv|flop.sv|mux.sv|Game.sv|
-Z16 !s90 -reportprogress|300|Game.sv|mux.sv|flop.sv|datapath.sv|Game_tb.sv|
+Z14 !s108 1714407830.000000
+!s107 Game_tb.sv|datapath.sv|flopr.sv|mux.sv|Game.sv|
+Z15 !s90 -reportprogress|300|Game.sv|mux.sv|flopr.sv|datapath.sv|Game_tb.sv|
 !i113 0
-Z17 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R5
 vevolve3
 R7
@@ -125,10 +166,10 @@ r1
 !s85 0
 31
 R14
+Z17 !s107 Game_tb.sv|datapath.sv|flopr.sv|mux.sv|Game.sv|
 R15
-R16
 !i113 0
-R17
+R16
 R5
 vevolve5
 R7
@@ -149,10 +190,10 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
 vevolve8
 R7
@@ -173,60 +214,35 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
-vflop
+vflopr
 R7
 R8
 !i10b 1
-!s100 JobzzhoH>B`:7Vb>kOgLX3
-I=Fa46baoHFZMGIc8[ohKz2
+!s100 ^26[6o5[oBMPo>fgAYf?02
+IMdYi8F4=54m?JQ_5TZ57D0
 S1
 R1
-Z18 w1713907792
-8flop.sv
-Fflop.sv
+w1714407777
+8flopr.sv
+Fflopr.sv
 !i122 0
-L0 27 8
+L0 28 9
 R12
 R13
 r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
-R5
-vGame
-R7
-R8
-!i10b 1
-!s100 <Ac3JREjl2ZeEB[_P5?9L3
-IM5HW2CT^o5akA>oaCTCXe3
-S1
-R1
-w1714193032
-8Game.sv
-FGame.sv
-!i122 0
-L0 1 18
-R12
-R13
-r1
-!s85 0
-31
-R14
 R15
-R16
 !i113 0
-R17
+R16
 R5
-n@game
 vmux16
 R7
 R8
@@ -235,7 +251,7 @@ R8
 IWHTMj;HK]8S?g7i?lHb0h3
 S1
 R1
-R18
+Z18 w1713907792
 Z19 8mux.sv
 Z20 Fmux.sv
 !i122 0
@@ -246,10 +262,10 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
 vmux2
 R7
@@ -270,10 +286,10 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
 vmux3
 R7
@@ -294,10 +310,10 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
 vmux4
 R7
@@ -318,10 +334,10 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
 vmux5
 R7
@@ -342,10 +358,10 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
 vmux6
 R7
@@ -366,10 +382,10 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
 vrules
 R7
@@ -390,32 +406,32 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
 vtb
 R7
 R8
 !i10b 1
-!s100 [3P>2b?gDEALQSSlHnQ`@3
-Il_GeGB<FM8E2^Bzz7X`OW2
+!s100 7c7g?<`;1E0DBdSD[AjRF1
+IeGkmbBdYcVlF`b:cFM[_F1
 S1
 R1
-w1714194606
+w1714406904
 8Game_tb.sv
 FGame_tb.sv
 !i122 0
-L0 3 27
+L0 3 28
 R12
 R13
 r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R5
