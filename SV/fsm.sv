@@ -1,8 +1,9 @@
-module fsm (clk, randSwitch, startSwitch, floprReset, manualSeed, muxStart, showShiftSeed);
+module fsm (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, muxStart, showShiftSeed);
 
    input logic clk;
    input logic randSwitch;
    input logic startSwitch;
+   input logic fsmReset;
 
    output logic floprReset;
    output logic manualSeed;
@@ -13,8 +14,8 @@ module fsm (clk, randSwitch, startSwitch, floprReset, manualSeed, muxStart, show
    statetype state, nextstate;
    
    // state register
-   always_ff @(posedge clk, posedge reset)
-     if (reset) state <= S0;
+   always_ff @(posedge clk, posedge fsmReset)
+     if (fsmReset) state <= S0;
      else       state <= nextstate;
    
    // next state logic

@@ -67,6 +67,7 @@ module top_demo
 
 
       logic [15:0] outputA;
+    
 
        always_comb begin
          case(sw[1:0])
@@ -82,7 +83,7 @@ module top_demo
    
   // Place Conway Game of Life instantiation here
   clk_div clk_div(sysclk_125mhz, btn[0], clk_en);
-  projectimus projectimus(clk_en, sw[3], sw[2], seed, floprGridOut,shift_seed);
+  projectimus projectimus(clk_en, sw[4], sw[3], sw[2], seed, floprGridOut,shift_seed);
  
   // HDMI
   // logic hdmi_out_en;
