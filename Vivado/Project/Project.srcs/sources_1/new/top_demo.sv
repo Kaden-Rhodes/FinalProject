@@ -57,17 +57,19 @@ module top_demo
 //----------------------------------------------------------------------------------------
   //My logic
       logic clk_en;
-      //randSwitch = sw[0]
-      //startSwitch = sw[1]
+      //randSwitch = sw[3]
+      //startSwitch = sw[2]
       logic [63:0] seed;
       assign seed = 64'h0000000000070000; 
 
-      logic shift_seed;
+      logic [63:0] shift_seed;
+      logic [63:0] floprGridOut;
+
 
       logic [15:0] outputA;
 
        always_comb begin
-         case(sw[2:0])
+         case(sw[1:0])
         2'b00     : outputA = shift_seed[63:48];
         2'b01     : outputA = shift_seed[47:32]; 
         2'b10     : outputA = shift_seed[31:16]; 
@@ -80,7 +82,7 @@ module top_demo
    
   // Place Conway Game of Life instantiation here
   clk_div clk_div(sysclk_125mhz, btn[0], clk_en);
-  projectimus projectimus(clk_en, sw[4], sw[1], seed, floprGridOut,shift_seed);
+  projectimus projectimus(clk_en, sw[3], sw[2], seed, floprGridOut,shift_seed);
  
   // HDMI
   // logic hdmi_out_en;
