@@ -4,6 +4,7 @@ input logic clk;
 
 input logic [63:0] shift_seed;
 
+input logic showShiftSeed;
 input logic muxStart;
 input logic floprReset;
 
