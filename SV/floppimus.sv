@@ -6,7 +6,7 @@ module floppimus (clk, floprReset, dpFlopr, floprGridOut);
   output logic [63:0] floprGridOut;
 
   always_ff @(posedge clk)
-    if (floprReset) floprGridOut[63:0] <= #1 0;
-    else       floprGridOut[63:0] <= #1 dpFlopr[63:0];
+    if (floprReset) floprGridOut[63:0] <=  0;
+    else       floprGridOut[63:0] <=  dpFlopr[63:0];
 endmodule
 
