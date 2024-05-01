@@ -1,4 +1,4 @@
-module projectimus (clk, randSwitch, startSwitch, seed, floprGridOut);
+module projectimus (clk, randSwitch, startSwitch, seed, floprGridOut, shift_seed);
 
 input logic clk;
 input logic randSwitch;
@@ -8,6 +8,9 @@ input logic [63:0] seed;
 
 output logic [63:0] floprGridOut;
 
+
+output logic [63:0] shift_seed;
+
 //fsm wires
 logic floprReset;
 logic manualSeed;
@@ -15,7 +18,6 @@ logic muxStart;
 logic showShiftSeed;
 
 //lfsr wires
-logic [63:0] shift_seed;
 
 fsm fsmimus (clk, randSwitch, startSwitch, floprReset, manualSeed, muxStart, showShiftSeed);
 
