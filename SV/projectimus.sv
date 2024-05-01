@@ -17,7 +17,6 @@ logic showShiftSeed;
 //lfsr wires
 logic [63:0] shift_seed;
 
-
 fsm fsmimus (clk, randSwitch, startSwitch, floprReset, manualSeed, muxStart, showShiftSeed);
 
 lfsr64 shiftimus (seed, clk, manualSeed, shift_seed);
