@@ -1,16 +1,16 @@
 module lfsr(small_seed, clk, manualSeed, shift_small_seed);
 //inputs and outputs for a smaller implementation
 //perhaps 8 or 16 bits
-input logic [7:0] small_seed;
+input logic [15:0] small_seed;
 input logic clk;
 input logic manualSeed;
-output logic [7:0] shift_small_seed;
+output logic [15:0] shift_small_seed;
 
 always @(posedge clk) begin
     if(manualSeed)
         shift_small_seed = small_seed;
     else
-        shift_small_seed = {shift_small_seed[6:0], ~(shift_small_seed[15]^shift_small_seed[14]^shift_small_seed[12]^shift_small_seed[3])};
+        shift_small_seed = {shift_small_seed[14:0], ~(shift_small_seed[15]^shift_small_seed[14]^shift_small_seed[12]^shift_small_seed[3])};
 end
 //your implementation of the LFSR.  Remember that this 
 //implementation has memory so it should be done 

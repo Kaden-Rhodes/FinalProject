@@ -54,7 +54,7 @@ module top_demo
   logic [16:0] NEXT_COUNT;
   logic        smol_clk;
 
-
+//----------------------------------------------------------------------------------------
   //My logic
       logic clk_en;
       //randSwitch = sw[0]
@@ -64,20 +64,17 @@ module top_demo
 
       logic shift_seed;
 
-      logic outputA;
+      logic [15:0] outputA;
 
-
-
-       always_comb begin 
-        
-    case(sw[2:0])
+       always_comb begin
+         case(sw[2:0])
         2'b00     : outputA = shift_seed[63:48];
         2'b01     : outputA = shift_seed[47:32]; 
         2'b10     : outputA = shift_seed[31:16]; 
         2'b11     : outputA = shift_seed [15:0];
         
-        default     : outputA = 64'h0; 
-    endcase
+        default     : outputA = 16'h0; 
+        endcase
        end
 
    
@@ -95,10 +92,10 @@ module top_demo
   segment_driver driver(
   .clk(smol_clk),
   .rst(btn[3]),
-  .digit0(sw[3:0]),
-  .digit1(4'b0111),
-  .digit2(sw[7:4]),
-  .digit3(4'b1111),
+  .digit0(outputA[3:0]),
+  .digit1(outputA[7:4]),
+  .digit2(outputA[11:8]),
+  .digit3(outputA[15:12]),
   .decimals({1'b0, btn[2:0]}),
   .segment_cathodes({sseg_dp, sseg_cg, sseg_cf, sseg_ce, sseg_cd, sseg_cc, sseg_cb, sseg_ca}),
   .digit_anodes(sseg_an)
