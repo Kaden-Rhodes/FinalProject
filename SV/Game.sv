@@ -1,10 +1,10 @@
-module Game(clk,shift_seed,showShiftSeed,muxStart,floprReset,GridOut);
+module Game(clk,shift_seed,showFloprGridOut,muxStart,floprReset,GridOut);
 
 input logic clk;
 
 input logic [63:0] shift_seed;
 
-input logic showShiftSeed;
+input logic showFloprGridOut;
 input logic muxStart;
 input logic floprReset;
 
@@ -21,7 +21,7 @@ datapath evolvimus (muxDp, dpFlopr);
 
 floppimus floppimus (clk, floprReset, dpFlopr, floprGridOut);
 
-muxximus muxximus2 (floprGridOut, shift_seed, showShiftSeed, GridOut);
+muxximus muxximus2 (shift_seed, floprGridOut, showFloprGridOut, GridOut);
 
 endmodule
 

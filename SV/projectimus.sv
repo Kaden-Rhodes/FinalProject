@@ -1,4 +1,4 @@
-module projectimus (clk,fsmReset, randSwitch, startSwitch, seed, GridOut, shift_seed);
+module projectimus (clk, fsmReset, randSwitch, startSwitch, seed, GridOut, shift_seed);
 
 input logic clk;
 input logic randSwitch;
@@ -14,11 +14,11 @@ output logic [63:0] GridOut;
 output logic [63:0] shift_seed;
 
 //fsm wires
-logic showShiftSeed;
+
 logic floprReset;
 logic manualSeed;
 logic muxStart;
-logic showShiftSeed;
+logic showFloprGridOut;
 
 
 //lfsr wires

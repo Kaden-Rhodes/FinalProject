@@ -66,39 +66,26 @@ module top_demo
       logic [63:0] GridOut;
 
 
-      logic [15:0] outputA;
     
-
-       always_comb begin
-         case(sw[1:0])
-        2'b00     : outputA = shift_seed[63:48];
-        2'b01     : outputA = shift_seed[47:32]; 
-        2'b10     : outputA = shift_seed[31:16]; 
-        2'b11     : outputA = shift_seed [15:0];
-        
-        default     : outputA = 16'h0; 
-        endcase
-       end
-
    
   // Place Conway Game of Life instantiation here
   clk_div clkimus (sysclk_125mhz, btn[0], clk_en);
-  projectimus projectimus(clk_en, sw[4], sw[3], sw[2], seed, GridOut,shift_seed);
+  projectimus projectimus(clk_en, sw[2], sw[1], sw[0], seed, GridOut,shift_seed);
  
   // HDMI
   // logic hdmi_out_en;
   //assign hdmi_out_en = 1'b0;
-  hdmi_top test (floprGridOut, sysclk_125mhz, hdmi_d_p, hdmi_d_n, hdmi_clk_p, 
+  hdmi_top test (GridOut, sysclk_125mhz, hdmi_d_p, hdmi_d_n, hdmi_clk_p, 
 		         hdmi_clk_n, hdmi_cec, hdmi_sda, hdmi_scl, hdmi_hpd);
   
   // 7-segment display
   segment_driver driver(
   .clk(smol_clk),
   .rst(btn[3]),
-  .digit0(outputA[3:0]),
-  .digit1(outputA[7:4]),
-  .digit2(outputA[11:8]),
-  .digit3(outputA[15:12]),
+  .digit0(0),
+  .digit1(0),
+  .digit2(0),
+  .digit3(0),
   .decimals({1'b0, btn[2:0]}),
   .segment_cathodes({sseg_dp, sseg_cg, sseg_cf, sseg_ce, sseg_cd, sseg_cc, sseg_cb, sseg_ca}),
   .digit_anodes(sseg_an)
