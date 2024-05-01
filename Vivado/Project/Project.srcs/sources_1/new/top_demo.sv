@@ -82,7 +82,7 @@ module top_demo
 
    
   // Place Conway Game of Life instantiation here
-  clk_div clk_div(sysclk_125mhz, btn[0], clk_en);
+  clk_div clkimus (sysclk_125mhz, btn[0], clk_en);
   projectimus projectimus(clk_en, sw[4], sw[3], sw[2], seed, floprGridOut,shift_seed);
  
   // HDMI
