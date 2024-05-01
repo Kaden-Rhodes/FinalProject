@@ -26,8 +26,6 @@ add wave -hex /tb/dut/seed
 add wave -hex /tb/dut/muxSelector
 add wave -hex /tb/dut/floprGridOut
 
-
-
 add list -hex -r /tb/*
 add log -r /*
 

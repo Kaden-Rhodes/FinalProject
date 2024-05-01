@@ -1,11 +1,16 @@
-module lfsr(seed, clk, reset, shift_seed);
+module lfsr(small_seed, clk, manualSeed, shift_small_seed);
 //inputs and outputs for a smaller implementation
 //perhaps 8 or 16 bits
+input logic [7:0] small_seed;
+input logic clk;
+input logic manualSeed;
+output logic [7:0] shift_small_seed;
+
 always @(posedge clk) begin
-    if(reset)
-        shift_seed = seed;
+    if(manualSeed)
+        shift_small_seed = small_seed;
     else
-        shift_small_seed = {shift_seed[14:0], shift_seed[15]~^shift_seed[14]~^shift_seed[12]~^shift_seed[3]};
+        shift_small_seed = {shift_small_seed[6:0], ~(shift_small_seed[15]^shift_small_seed[14]^shift_small_seed[12]^shift_small_seed[3])};
 end
 //your implementation of the LFSR.  Remember that this 
 //implementation has memory so it should be done 
@@ -13,10 +18,15 @@ end
 
 endmodule
 
-module lfsr64 (seed, clk, reset, shift_seed);
+module lfsr64 (seed, clk, manualSeed, shift_seed);
 //inputs and outputs for the full seed size (64 bits)
+input logic [63:0] seed;
+input logic clk;
+input logic manualSeed;
+output logic [63:0] shift_seed;
+
 always @(posedge clk) begin
-    if(reset)
+    if(manualSeed)
         shift_seed = seed;
     else
     shift_seed = {shift_seed[62:0], shift_seed[63]~^shift_seed[62]~^shift_seed[60]~^shift_seed[59]};
@@ -24,5 +34,4 @@ end
 //either build a 64 bit version using your smaller implementation above
 //or use the same methods from the xilinx document to build a full
 //64 bit version
-
 endmodule

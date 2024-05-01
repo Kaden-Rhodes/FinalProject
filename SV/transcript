@@ -11,7 +11,7 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# do game.do
+# do lfsr.do
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt10".  Locker is kaden@KADEN-FWLAPTOP.
@@ -28,6 +28,12 @@
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt20".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt21".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt22".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt23".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt24".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt25".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt26".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt27".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt28".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt4".  Locker is kaden@KADEN-FWLAPTOP.
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt5".  Locker is kaden@KADEN-FWLAPTOP.
@@ -38,39 +44,83 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 15:00:04 on Apr 29,2024
-# vlog -reportprogress 300 Game.sv muxximus.sv floppimus.sv datapath.sv Game_tb.sv 
-# -- Compiling module Game
-# -- Compiling module muxximus
-# -- Compiling module floppimus
-# -- Compiling module datapath
-# -- Compiling module evolve3
-# -- Compiling module evolve5
-# -- Compiling module evolve8
-# -- Compiling module rules
+# Start time: 17:51:16 on Apr 30,2024
+# vlog -reportprogress 300 lfsr.sv lfsr_tb.sv 
+# -- Compiling module lfsr
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 15:00:04 on Apr 29,2024, Elapsed time: 0:00:00
+# End time: 17:51:16 on Apr 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.tb 
-# Start time: 15:00:04 on Apr 29,2024
+# Start time: 17:51:16 on Apr 30,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading sv_std.std
 # Loading work.tb(fast)
-# Loading work.Game(fast)
-# Loading work.muxximus(fast)
-# Loading work.datapath(fast)
-# Loading work.evolve3(fast)
-# Loading work.rules(fast)
-# Loading work.evolve5(fast)
-# Loading work.evolve8(fast)
-# Loading work.floppimus(fast)
+# Loading work.lfsr(fast)
 # .main_pane.list.interior.cs.body
 # .main_pane.wave.interior.cs.body.pw.wf
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: kaden  Hostname: KADEN-FWLAPTOP  ProcessID: 18528
-#           Attempting to use alternate WLF file "./wlft9bjbt0".
+#           Attempting to use alternate WLF file "./wlfty4fq9n".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft9bjbt0
+#           Using alternate file: ./wlfty4fq9n
+do lfsr.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt10".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt11".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt12".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt13".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt14".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt15".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt16".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt17".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt18".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt19".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt2".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt20".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt21".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt22".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt23".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt24".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt25".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt26".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt27".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt28".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt29".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt3".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt4".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt5".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt6".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt7".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt8".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt9".  Locker is kaden@KADEN-FWLAPTOP.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
+# Start time: 17:59:29 on Apr 30,2024
+# vlog -reportprogress 300 lfsr.sv lfsr_tb.sv 
+# -- Compiling module lfsr
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 17:59:29 on Apr 30,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:59:31 on Apr 30,2024, Elapsed time: 0:08:15
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.tb 
+# Start time: 17:59:31 on Apr 30,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.tb(fast)
+# Loading work.lfsr(fast)
+# .main_pane.list.interior.cs.body
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: kaden  Hostname: KADEN-FWLAPTOP  ProcessID: 18528
+#           Attempting to use alternate WLF file "./wlftfza49f".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfza49f

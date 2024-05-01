@@ -53,13 +53,22 @@ module top_demo
   logic [16:0] CURRENT_COUNT;
   logic [16:0] NEXT_COUNT;
   logic        smol_clk;
+
+
+  //My logic
+  logic clk_en;
+  //randSwitch = sw[0]
+  //startSwitch = sw[1]
+
    
   // Place Conway Game of Life instantiation here
+  clk_div clk_div(sysclk_125mhz, btn[0], clk_en);
+  projectimus projectimus(clk_en, randSwitch, startSwitch, seed, floprGridOut);
  
   // HDMI
   // logic hdmi_out_en;
   //assign hdmi_out_en = 1'b0;
-  hdmi_top test (n2, sysclk_125mhz, hdmi_d_p, hdmi_d_n, hdmi_clk_p, 
+  hdmi_top test (floprGridOut, sysclk_125mhz, hdmi_d_p, hdmi_d_n, hdmi_clk_p, 
 		         hdmi_clk_n, hdmi_cec, hdmi_sda, hdmi_scl, hdmi_hpd);
   
   // 7-segment display

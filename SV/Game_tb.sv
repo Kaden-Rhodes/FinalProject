@@ -5,10 +5,10 @@ module tb ();
 logic clk;
 
 
-logic [255:0] seed;
+logic [63:0] seed;
 logic muxSelector;
 logic floprReset;
-logic [255:0] flopGridOut;
+logic [63:0] flopGridOut;
 
 
 Game dut (clk, seed, muxSelector, floprReset, flopGridOut);
@@ -23,11 +23,11 @@ initial
     begin
 
     #0 floprReset = 1'b0;
-    #0 muxSelector = 1'b0; 
-    #0 seed = 256'h0000700000000000000000000000000000000000000000000000000000000000; 
+    #0 muxSelector = 1'b1; 
+    #0 seed = 64'h0000700000000000; 
 
-    #50 muxSelector = 1'b1;
-    #50 muxSelector = 1'b0;  
+    #50 muxSelector = 1'b0;
+      
     
     end
 endmodule
