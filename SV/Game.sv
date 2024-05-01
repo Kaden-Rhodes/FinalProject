@@ -21,7 +21,7 @@ datapath evolvimus (muxDp, dpFlopr);
 
 floppimus floppimus (clk, floprReset, dpFlopr, floprGridOut);
 
-muxximus muxximus2 (shift_seed, floprGridOut, showShiftSeed, GridOut);
+muxximus muxximus2 (floprGridOut, shift_seed, showShiftSeed, GridOut);
 
 endmodule
 
