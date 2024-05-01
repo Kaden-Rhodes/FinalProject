@@ -1,4 +1,4 @@
-module Game(clk,shift_seed,muxStart,floprReset,GridOut);
+module Game(clk,shift_seed,showShiftSeed,muxStart,floprReset,GridOut);
 
 input logic clk;
 

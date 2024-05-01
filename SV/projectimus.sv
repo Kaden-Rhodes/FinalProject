@@ -14,6 +14,7 @@ output logic [63:0] GridOut;
 output logic [63:0] shift_seed;
 
 //fsm wires
+logic showShiftSeed;
 logic floprReset;
 logic manualSeed;
 logic muxStart;
@@ -26,6 +27,6 @@ fsm fsmimus (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, mux
 
 lfsr64 shiftimus (seed, clk, manualSeed, shift_seed);
 
-Game gamimus (clk,shift_seed,muxStart,floprReset,GridOut);
+Game gamimus (clk,shift_seed,showShiftSeed,muxStart,floprReset,GridOut);
 
 endmodule
