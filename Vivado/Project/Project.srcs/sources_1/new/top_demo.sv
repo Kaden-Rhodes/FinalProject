@@ -63,7 +63,7 @@ module top_demo
       assign seed = 64'h0000000000070000; 
 
       logic [63:0] shift_seed;
-      logic [63:0] floprGridOut;
+      logic [63:0] GridOut;
 
 
       logic [15:0] outputA;
@@ -83,7 +83,7 @@ module top_demo
    
   // Place Conway Game of Life instantiation here
   clk_div clkimus (sysclk_125mhz, btn[0], clk_en);
-  projectimus projectimus(clk_en, sw[4], sw[3], sw[2], seed, floprGridOut,shift_seed);
+  projectimus projectimus(clk_en, sw[4], sw[3], sw[2], seed, GridOut,shift_seed);
  
   // HDMI
   // logic hdmi_out_en;

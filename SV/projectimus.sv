@@ -1,4 +1,4 @@
-module projectimus (clk,fsmReset, randSwitch, startSwitch, seed, floprGridOut, shift_seed);
+module projectimus (clk,fsmReset, randSwitch, startSwitch, seed, GridOut, shift_seed);
 
 input logic clk;
 input logic randSwitch;
@@ -8,7 +8,7 @@ input logic fsmReset;
 
 input logic [63:0] seed;
 
-output logic [63:0] floprGridOut;
+output logic [63:0] GridOut;
 
 
 output logic [63:0] shift_seed;
@@ -26,6 +26,6 @@ fsm fsmimus (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, mux
 
 lfsr64 shiftimus (seed, clk, manualSeed, shift_seed);
 
-Game gamimus (clk,shift_seed,muxStart,floprReset,floprGridOut);
+Game gamimus (clk,shift_seed,muxStart,floprReset,GridOut);
 
 endmodule

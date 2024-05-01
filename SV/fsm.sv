@@ -58,7 +58,7 @@ module fsm (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, muxS
 	       floprReset <= 1'b0;
           manualSeed <= 1'b0;
           muxStart <= 1'b1;
-          showShiftSeed <= 1'b1;	  
+          showShiftSeed <= 1'b0;	  
           
           if (randSwitch && startSwitch) nextstate <= S3;
           else if(startSwitch) nextstate <= S1;
