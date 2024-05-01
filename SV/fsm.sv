@@ -22,7 +22,7 @@ module fsm (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, muxS
    always_comb
      case (state)
        S0: begin
-          floprReset <= 1'b1;
+          floprReset <= 1'b0;
           manualSeed <= 1'b1;
           muxStart <= 1'b0;
           showFloprGridOut <= 1'b0;	  
@@ -34,9 +34,9 @@ module fsm (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, muxS
       end
        S1: begin
           floprReset <= 1'b0;
-          manualSeed <= 1'b1;
-          muxStart <= 1'b1;
-          showFloprGridOut <= 1'b1;	  
+          manualSeed <= 1'b0;
+          muxStart <= 1'b0;
+          showFloprGridOut <= 1'b0;	  
           
           if (randSwitch && startSwitch) nextstate <= S3;
           else if(startSwitch) nextstate <= S1;
@@ -45,8 +45,8 @@ module fsm (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, muxS
        end
        S2: begin
           floprReset <= 1'b0;
-          manualSeed <= 1'b0;
-          muxStart <= 1'b0;
+          manualSeed <= 1'b1;
+          muxStart <= 1'b1;
           showFloprGridOut <= 1'b1;	  
           
           if (randSwitch && startSwitch) nextstate <= S3;
@@ -57,8 +57,8 @@ module fsm (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, muxS
        S3: begin
 	       floprReset <= 1'b0;
           manualSeed <= 1'b0;
-          muxStart <= 1'b0;
-          showFloprGridOut <= 1'b0;	  
+          muxStart <= 1'b1;
+          showFloprGridOut <= 1'b1;	  
           
           if (randSwitch && startSwitch) nextstate <= S3;
           else if(startSwitch) nextstate <= S1;
