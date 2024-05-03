@@ -13,7 +13,7 @@ logic lfsrSignal;
 logic muxGameSignal;
 logic muxDisplaySignal;
 
-logic shift_seed;
+logic [63:0] shift_seed;
 
 
 //lfsr wires

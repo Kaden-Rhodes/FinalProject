@@ -22,7 +22,7 @@ module fsm (clk, fsmReset, sw0, sw1, floprResetSignal, lfsrSignal, muxGameSignal
    always_comb
      case (state)
        S0: begin
-          floprResetSignal <= 1'b0;
+          floprResetSignal <= 1'b0;  //0100
           lfsrSignal <= 1'b1;
           muxGameSignal <= 1'b0;
           muxDisplaySignal <= 1'b0;	  
