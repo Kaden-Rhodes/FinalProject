@@ -41,6 +41,11 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2021.3 2021.07, Jul 13 2021
 13
 !s112 1.1
@@ -313,6 +318,16 @@ R5
 n@_opt3
 R6
 R1
+T_opt30
+Z7 !s110 1714627232
+VzRAIAefRTIEfO<;QnAEMf2
+R2
+=1-8cb87ec89cc2-663322a0-1b9-8f0
+R3
+R4
+R5
+n@_opt30
+R6
 T_opt4
 !s110 1714194502
 VRm4LCV5HIMO0;RHV<NOdc0
@@ -379,148 +394,75 @@ R5
 n@_opt9
 R6
 R1
-vfloppimus
-Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1714606244
-!i10b 1
-!s100 CLfIMh?_U?]l:1Q6k=>8l2
-IE^Q7l4gGLZIOb9?IUX9P62
-S1
-R1
-w1714602198
-8floppimus.sv
-Ffloppimus.sv
-!i122 6
-L0 3 9
-Z8 VDg1SIo80bB@j0V0VzS_@n1
-Z9 OL;L;2021.3;73
-r1
-!s85 0
-31
-!s108 1714606244.000000
-!s107 floppimus.sv|
-!s90 floppimus.sv|
-!i113 0
-Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R5
-vfsm
-R7
-!s110 1714606251
-!i10b 1
-!s100 QoH5^Wz@ZAMaTj1;ATcU;0
-IZaDgFzXXAPYQd1Ro8nSL@1
-S1
-R1
-w1714606055
-8fsm.sv
-Ffsm.sv
-!i122 7
-L0 1 71
-R8
-R9
-r1
-!s85 0
-31
-!s108 1714606250.000000
-!s107 fsm.sv|
-!s90 fsm.sv|
-!i113 0
-R10
-R5
-vGame
-R7
-!s110 1714606226
-!i10b 1
-!s100 [CVCQFMNimja]]eBOg`V<1
-IUcf7ad`fb6W0YN?AXC3;T1
-S1
-R1
-w1714605801
-8game.sv
-Fgame.sv
-!i122 4
-L0 1 26
-R8
-R9
-r1
-!s85 0
-31
-!s108 1714606226.000000
-!s107 game.sv|
-!s90 game.sv|
-!i113 0
-R10
-R5
-n@game
 vlfsr
+Z8 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
 R7
-Z11 !s110 1714517969
 !i10b 1
-!s100 mBi>@lm^8>52JXL:??54X2
-IhNd3LHPge=H??X37RDii?3
+!s100 NoEI3L4T79BH_>PIF@`5K3
+IE[Gj9o62U5DliWMZLZi3T3
 S1
 R1
-w1714517686
-8lfsr.sv
-Flfsr.sv
+Z9 w1714626119
+Z10 8lfsr.sv
+Z11 Flfsr.sv
 !i122 0
 L0 1 19
-R8
-R9
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OL;L;2021.3;73
 r1
 !s85 0
 31
-Z12 !s108 1714517969.000000
-Z13 !s107 lfsr_tb.sv|lfsr.sv|
-Z14 !s90 -reportprogress|300|lfsr.sv|lfsr_tb.sv|
+Z14 !s108 1714627232.000000
+Z15 !s107 lfsr_tb.sv|lfsr.sv|
+Z16 !s90 lfsr.sv|lfsr_tb.sv|
 !i113 0
-R10
+Z17 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R5
-vprojectimus
+vlfsr64
+R8
 R7
-!s110 1714606234
 !i10b 1
-!s100 TH_e7f;1_nMnhi?2VV_7B2
-IhY?S6?BafRUmbV`L=Q>US1
+!s100 _Y5Y7M[AFYBiMdV4_Z4GL2
+INgVmKHZXZ:G>NRAF;k_JD3
 S1
 R1
-w1714606176
-8projectimus.sv
-Fprojectimus.sv
-!i122 5
-L0 1 32
-R8
 R9
+R10
+R11
+!i122 0
+L0 21 17
+R12
+R13
 r1
 !s85 0
 31
-!s108 1714606233.000000
-!s107 projectimus.sv|
-!s90 projectimus.sv|
+R14
+R15
+R16
 !i113 0
-R10
+R17
 R5
 vtb
+R8
 R7
-R11
 !i10b 1
-!s100 LjBMOn80o6cF:GDlH0<Id3
-ImPf^=fdleCf8KUfU@eXPQ0
+!s100 fm?z@^:FPliEH30DYJXYj2
+IMn?g6C3dd[ELccZ:AQ5Q<0
 S1
 R1
-w1714517959
+w1714626962
 8lfsr_tb.sv
 Flfsr_tb.sv
 !i122 0
 L0 2 83
-R8
-R9
+R12
+R13
 r1
 !s85 0
 31
-R12
-R13
 R14
+R15
+R16
 !i113 0
-R10
+R17
 R5

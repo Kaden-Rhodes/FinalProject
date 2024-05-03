@@ -18,15 +18,15 @@ end
 
 endmodule
 
-module lfsr64 (seed, clk, manualSeed, shift_seed);
+module lfsr64 (seed, clk, lfsrSignal, shift_seed);
 //inputs and outputs for the full seed size (64 bits)
 input logic [63:0] seed;
 input logic clk;
-input logic manualSeed;
+input logic lfsrSignal;
 output logic [63:0] shift_seed;
 
 always @(posedge clk) begin
-    if(manualSeed)
+    if(lfsrSignal)
         shift_seed = seed;
     else
     shift_seed = {shift_seed[62:0], shift_seed[63]~^shift_seed[62]~^shift_seed[60]~^shift_seed[59]};

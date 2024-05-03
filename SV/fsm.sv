@@ -1,16 +1,16 @@
-module fsm (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, muxStart, showFloprGridOut);
+module fsm (clk, fsmReset, sw0, sw1, floprResetSignal, lfsrSignal, muxGameSignal, muxDisplaySignal);
 
    input logic clk;
-   input logic randSwitch;
-   input logic startSwitch;
+   input logic sw0;
+   input logic sw1;
    input logic fsmReset;
 
-   output logic floprReset;
-   output logic manualSeed;
-   output logic muxStart;
-   output logic showFloprGridOut;
+   output logic floprResetSignal;
+   output logic lfsrSignal;
+   output logic muxGameSignal;
+   output logic muxDisplaySignal;
 
-   typedef enum logic [2:0] {S0, S1, S2, S3} statetype;
+   typedef enum logic [1:0] {S0, S1, S2, S3} statetype;
    statetype state, nextstate;
    
    // state register
@@ -22,47 +22,47 @@ module fsm (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, muxS
    always_comb
      case (state)
        S0: begin
-          floprReset <= 1'b0;
-          manualSeed <= 1'b1;
-          muxStart <= 1'b0;
-          showFloprGridOut <= 1'b0;	  
+          floprResetSignal <= 1'b0;
+          lfsrSignal <= 1'b1;
+          muxGameSignal <= 1'b0;
+          muxDisplaySignal <= 1'b0;	  
           
-          if (randSwitch && startSwitch) nextstate <= S3;
-          else if(startSwitch) nextstate <= S1;
-          else if(randSwitch) nextstate <=S2;
+          if (sw0 && sw1) nextstate <= S3;
+          else if(sw1) nextstate <= S1;
+          else if(sw0) nextstate <=S2;
           else nextstate <=S0;
       end
        S1: begin
-          floprReset <= 1'b0;
-          manualSeed <= 1'b0;
-          muxStart <= 1'b0;
-          showFloprGridOut <= 1'b0;	  
+          floprResetSignal <= 1'b0;
+          lfsrSignal <= 1'b0;
+          muxGameSignal <= 1'b0;
+          muxDisplaySignal <= 1'b0;	  
           
-          if (randSwitch && startSwitch) nextstate <= S3;
-          else if(startSwitch) nextstate <= S1;
-          else if(randSwitch) nextstate <=S2;
+          if (sw0 && sw1) nextstate <= S3;
+          else if(sw1) nextstate <= S1;
+          else if(sw0) nextstate <=S2;
           else nextstate <=S0;
        end
        S2: begin
-          floprReset <= 1'b0;
-          manualSeed <= 1'b1;
-          muxStart <= 1'b1;
-          showFloprGridOut <= 1'b1;	  
+          floprResetSignal <= 1'b0;
+          lfsrSignal <= 1'b1;
+          muxGameSignal <= 1'b1;
+          muxDisplaySignal <= 1'b1;	  
           
-          if (randSwitch && startSwitch) nextstate <= S3;
-          else if(startSwitch) nextstate <= S1;
-          else if(randSwitch) nextstate <=S2;
+          if (sw0 && sw1) nextstate <= S3;
+          else if(sw1) nextstate <= S1;
+          else if(sw0) nextstate <=S2;
           else nextstate <=S0;
        end
        S3: begin
-	       floprReset <= 1'b0;
-          manualSeed <= 1'b0;
-          muxStart <= 1'b1;
-          showFloprGridOut <= 1'b1;	  
+	       floprResetSignal <= 1'b0;
+          lfsrSignal <= 1'b0;
+          muxGameSignal <= 1'b1;
+          muxDisplaySignal <= 1'b1;	  
           
-          if (randSwitch && startSwitch) nextstate <= S3;
-          else if(startSwitch) nextstate <= S1;
-          else if(randSwitch) nextstate <=S2;
+          if (sw0 && sw1) nextstate <= S3;
+          else if(sw1) nextstate <= S1;
+          else if(sw0) nextstate <=S2;
           else nextstate <=S0;  
        end
        

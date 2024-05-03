@@ -1,32 +1,27 @@
-module projectimus (clk, fsmReset, randSwitch, startSwitch, seed, GridOut, shift_seed);
+module projectimus (clk, fsmReset, sw0, sw1, seed, GridOut);
 
 input logic clk;
-input logic randSwitch;
-input logic startSwitch;
-
 input logic fsmReset;
-
+input logic sw0;
+input logic sw1;
 input logic [63:0] seed;
-
 output logic [63:0] GridOut;
 
 
-output logic [63:0] shift_seed;
+logic floprResetSignal;
+logic lfsrSignal;
+logic muxGameSignal;
+logic muxDisplaySignal;
 
-//fsm wires
-
-logic floprReset;
-logic manualSeed;
-logic muxStart;
-logic showFloprGridOut;
+logic shift_seed;
 
 
 //lfsr wires
 
-fsm fsmimus (clk, fsmReset, randSwitch, startSwitch, floprReset, manualSeed, muxStart, showShiftSeed);
+fsm fsmimus (clk, fsmReset, sw0, sw1, floprResetSignal, lfsrSignal, muxGameSignal, muxDisplaySignal);
 
-lfsr64 shiftimus (seed, clk, manualSeed, shift_seed);
+lfsr64 shiftimus (seed, clk, lfsrSignal, shift_seed);
 
-Game gamimus (clk,shift_seed,showShiftSeed,muxStart,floprReset,GridOut);
+Game gamimus (clk,shift_seed,muxDisplaySignal,muxGameSignal,floprResetSignal,GridOut);
 
 endmodule

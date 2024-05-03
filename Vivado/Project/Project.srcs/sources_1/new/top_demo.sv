@@ -57,12 +57,9 @@ module top_demo
 //----------------------------------------------------------------------------------------
   //My logic
       logic clk_en;
-      //randSwitch = sw[3]
-      //startSwitch = sw[2]
       logic [63:0] seed;
       assign seed = 64'h0000000000070000; 
 
-      logic [63:0] shift_seed;
       logic [63:0] GridOut;
 
 
@@ -70,7 +67,7 @@ module top_demo
    
   // Place Conway Game of Life instantiation here
   clk_div clkimus (sysclk_125mhz, btn[0], clk_en);
-  projectimus projectimus(clk_en, sw[2], sw[1], sw[0], seed, GridOut,shift_seed);
+  projectimus projectimus(clk_en, sw[7], sw[0], sw[1], seed, GridOut);
  
   // HDMI
   // logic hdmi_out_en;

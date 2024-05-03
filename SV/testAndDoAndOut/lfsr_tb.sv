@@ -30,8 +30,8 @@ module tb ();
     
     #0 small_seed = 16'h0001; 
     #0 lfsrReset = 1'b0;
-    #30 lfsrReset = 1'b1;
-    #30 lfsrReset = 1'b0;
+    #20 lfsrReset = 1'b1;
+    #20 lfsrReset = 1'b0;
     
     
 
@@ -44,7 +44,7 @@ module tb ();
     //gives output file name
     handle3 = $fopen("lfsr.out");
     //tells when to finish simulation
-    #500 $finish;
+    #1310800 $finish;
   end
 
   always
