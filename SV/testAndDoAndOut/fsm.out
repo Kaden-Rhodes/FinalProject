@@ -1,0 +1,392 @@
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 1
+ sw1 = 1
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 1
+ sw1 = 1
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 1
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 1
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 1
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 1
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 1
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 1
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+
+clk = 0
+ sw0 = 0
+ sw1 = 0
+ floprResetSignal = x
+ lfsrSignal = x
+  muxGameSignal = x
+ muxDisplaySignal = x
+

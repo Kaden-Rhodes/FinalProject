@@ -64,11 +64,7 @@ module tb ();
 	//and see whenb you repeat
      
 
-   always @(posedge clk)
-     begin
-		//output your results to a file
-     end
-
+/*
    // check results on falling edge of clk
    always @(negedge clk) begin
 		if(~lfsrReset) begin
@@ -77,9 +73,9 @@ module tb ();
 		//this should be (2^n) - 1
 		//if the output never repeats for 2^n iterations, report that
 		end
-	end
+	/*end
 
  
-   
+   */
 endmodule // tb
 

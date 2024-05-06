@@ -9,7 +9,7 @@ if [file exists work] {
 vlib work
 
 # compile source files
-vlog Game.sv muxximus.sv floppimus.sv datapath.sv Game_tb.sv
+vlog fsm.sv fsm_tb.sv
 
 # start and run simulation
 vsim -voptargs=+acc work.tb
@@ -22,10 +22,7 @@ view wave
 # add wave -hex -r /tb/*
 
 add wave -hex /tb/dut/clk
-add wave -hex /tb/dut/shift_seed
-add wave -hex /tb/dut/muxDisplaySignal
-add wave -hex /tb/dut/muxGameSignal
-add wave -hex /tb/dut/GridOut
+
 
 add list -hex -r /tb/*
 add log -r /*
@@ -43,6 +40,6 @@ configure wave -rowmargin 4
 configure wave -childrowmargin 2
 
 -- Run the Simulation
-run 400 ns
+run 1000 ns
 
 
